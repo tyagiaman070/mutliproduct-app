@@ -1,13 +1,185 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* dropDown List */
+.App {
+  height: 100%;
+}
+.div_outer {
+  background: linear-gradient(238.72deg, #9086ff 0%, #000000 100%),
+    linear-gradient(301.28deg, #ff0000 0%, #20002c 100%),
+    linear-gradient(121.28deg, #207a00 0%, #950000 100%),
+    linear-gradient(238.72deg, #00d1ff 0%, #000000 100%),
+    linear-gradient(238.72deg, #00d1ff 0%, #a80000 100%),
+    linear-gradient(58.72deg, #b80000 0%, #1b00c2 100%),
+    linear-gradient(125.95deg, #00e0ff 10.95%, #87009d 100%),
+    linear-gradient(263.7deg, #b60000 3.43%, #b100a0 96.57%),
+    linear-gradient(320.54deg, #800000 0%, #00c2ff 72.37%),
+    linear-gradient(130.22deg, #b9c900 18.02%, #8f73ff 100%);
+  background-blend-mode: color-dodge, difference, color-dodge, difference,
+    lighten, difference, color-dodge, difference, difference, normal;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.cards-div {
+  background: linear-gradient(180deg, #ffb7b7 0%, #727272 100%),
+    radial-gradient(60.91% 100% at 50% 0%, #ffd1d1 0%, #260000 100%),
+    linear-gradient(238.72deg, #ffdddd 0%, #720066 100%),
+    linear-gradient(127.43deg, #00ffff 0%, #ff4444 100%),
+    radial-gradient(100.22% 100% at 70.57% 0%, #ff0000 0%, #00ffe0 100%),
+    linear-gradient(127.43deg, #b7d500 0%, #3300ff 100%);
+  background-blend-mode: screen, overlay, hard-light, color-burn, color-dodge,
+    normal;
+}
+.cartImage {
+  height: 15rem;
+}
+.cart-name {
+  font-size: 30px;
+  margin-top: 13px;
+  font-weight: bolder;
+}
+.cart-price {
+  font-size: 30px;
+  font-weight: bolder;
+}
+.cart-button {
+  margin-top: 50px;
+}
+.myMail:hover {
+  color: rgba(158, 53, 127, 1);
+}
+.myMail {
+  color: orange;
+}
+.dropdown_list_price {
+  /*  */
+  margin: 20px 50px 20px 50px;
+  /* margin: 50px; */
+}
+
+.dropdown_list_count {
+  margin: 20px 50px 20px 50px;
+}
+
+.dropdown_list_product {
+  /*  */
+  margin: 20px 50px 20px 50px;
+  /* margin: 50px; */
+}
+
+.dropdown_list_div {
+  align-items: center;
+  text-align: center;
+}
+
+@media only screen and (max-width: 768px) {
+  .cartImage {
+    height: 10rem;
+  }
+  .cart-name {
+    font-size: 20px;
+  }
+  .cart-price {
+    font-size: 20px;
+  }
+  .cart-button {
+    margin-top: 20px;
+    font-size: 20px;
+  }
+}
+@media only screen and (max-width: 630px) {
+  .cartImage {
+    height: 8rem;
+  }
+  .cart-name {
+    font-size: 15px;
+    margin-top: 10px;
+  }
+  .cart-price {
+    font-size: 15px;
+  }
+  .cart-button {
+    margin-top: 20px;
+    font-size: 15px;
+  }
+}
+@media only screen and (max-width: 530px) {
+  .cartImage {
+    height: 5rem;
+  }
+  .cart-name {
+    font-size: 12px;
+    margin-top: 10px;
+  }
+  .cart-price {
+    font-size: 12px;
+  }
+  .cart-button {
+    margin-top: 10px;
+    font-size: 12px;
+  }
+}
+
+/* styling list dropdown */
+select {
+  background-color: white;
+  border-radius: 4px;
+  display: inline-block;
+  font: inherit;
+  line-height: 1.5em;
+  padding: 0.5em 3.5em 0.5em 1em;
+  overflow-y: auto;
+  overflow-x: hidden;
+  cursor: pointer;
+  width: 250px;
+
+  /* reset */
+
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+select option {
+  margin: 80px;
+  background: rgba(201, 12, 5, 0.25);
+  padding: 40px;
+  font-size: 20px;
+  line-height: 500px;
+  cursor: pointer !important;
+}
+
+option:not(:checked) {
+  padding: 40px;
+  background: rgb(254, 136, 235);
+}
+
+/* option:hover {
+  background-color: yellow;
+} */
+
+select:-moz-focusring {
+  color: transparent;
+  text-shadow: 0 0 0 #000;
+}
+select.modif {
+  background-image: linear-gradient(45deg, transparent 50%, gray 50%),
+    linear-gradient(135deg, gray 50%, transparent 50%),
+    linear-gradient(to right, #ccc, #ccc);
+  background-position: calc(100% - 20px) calc(1em + 2px),
+    calc(100% - 15px) calc(1em + 2px), calc(100% - 2.5em) 0.5em;
+  background-size: 5px 5px, 5px 5px, 1px 1.5em;
+  background-repeat: no-repeat;
+}
+
+select.modif:focus {
+  background-image: linear-gradient(45deg, green 50%, transparent 50%),
+    linear-gradient(135deg, transparent 50%, green 50%),
+    linear-gradient(to right, #ccc, #ccc);
+  background-position: calc(100% - 15px) 1em, calc(100% - 20px) 1em,
+    calc(100% - 2.5em) 0.5em;
+  background-size: 5px 5px, 5px 5px, 1px 1.5em;
+  background-repeat: no-repeat;
+  /* border-color: green; */
+  outline: 0;
 }
